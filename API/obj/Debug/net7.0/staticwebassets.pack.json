@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\Color_Icon_Edit.png",
+      "PackagePath": "staticwebassets\\Color_Icon_Edit.png"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\Color_Logo_Edit.png",
+      "PackagePath": "staticwebassets\\Color_Logo_Edit.png"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\Color_Logo_No_Icon.png",
+      "PackagePath": "staticwebassets\\Color_Logo_No_Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\Color_Logo_Edit-qojq1iSC.png",
+      "PackagePath": "staticwebassets\\assets\\Color_Logo_Edit-qojq1iSC.png"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\Color_Logo_No_Icon-LGUi4kM1.png",
+      "PackagePath": "staticwebassets\\assets\\Color_Logo_No_Icon-LGUi4kM1.png"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\Neuton Regular-zjEwYgeu.ttf",
+      "PackagePath": "staticwebassets\\assets\\Neuton Regular-zjEwYgeu.ttf"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-GPtVSxLq.css",
+      "PackagePath": "staticwebassets\\assets\\index-GPtVSxLq.css"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-cDA3O-d-.js",
+      "PackagePath": "staticwebassets\\assets\\index-cDA3O-d-.js"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
