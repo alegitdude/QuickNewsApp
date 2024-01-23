@@ -33,12 +33,12 @@
       "PackagePath": "staticwebassets\\assets\\index-R7E1qyML.js"
     },
     {
-      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-cDA3O-d-.js",
-      "PackagePath": "staticwebassets\\assets\\index-cDA3O-d-.js"
-    },
-    {
       "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\web.config",
+      "PackagePath": "staticwebassets\\web.config"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",

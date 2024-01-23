@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wH0McG9Yvkqdyf317rI45UgQrQ7trO+BrCBJpISJQpPzSEC6Jz23dNGbEc5k3r+S8REoOqYY96UKP4OGHIgLAA==",
+  "dgSpecHash": "NSG95Y/eGTD2q6mDwrcv9PYp5PSSEw3Mzz3FeH18nDOwboHMM6LBQT1yWvKijI51y0hseXE2iPYuxQRT5EDT8A==",
   "success": true,
-  "projectFilePath": "c:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rickb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -178,5 +178,26 @@
     "C:\\Users\\rickb\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.33.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.IdentityModel.Tokens.Jwt' 6.33.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g9c-28fc-mcx2",
+      "libraryId": "System.IdentityModel.Tokens.Jwt",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

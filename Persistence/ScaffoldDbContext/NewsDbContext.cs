@@ -35,10 +35,11 @@ public partial class NewsDbContext : IdentityDbContext<AppUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var client = new SecretClient(new Uri("https://NewsVault.vault.azure.net/"), new DefaultAzureCredential(), options);
-            KeyVaultSecret dbSecret =  client.GetSecret("SqlDbPass");
+            // var client = new SecretClient(new Uri("https://NewsVault.vault.azure.net/"), new DefaultAzureCredential(), options);
+            // KeyVaultSecret dbSecret =  client.GetSecret("SqlDbPass");
 
-            optionsBuilder.UseSqlServer(dbSecret.ToString());
+            // optionsBuilder.UseSqlServer(dbSecret.ToString());
+            optionsBuilder.UseSqlServer("Server=tcp:news-server.database.windows.net,1433;Initial Catalog=NewsDb;Persist Security Info=False;User ID=newsapp;Password=Trfodj51;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
