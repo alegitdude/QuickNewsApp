@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 const { useArticleListQuery } = api;
 
-const client = algoliasearch("PG42VRDQ3Y", "dcc5dbca14663457c3e13661fdd38749");
+const client = algoliasearch("PG42VRDQ3Y", import.meta.env.VITE_ALGO_STRING);
 const index = client.initIndex("articles");
 
 const NewsPage = () => {
