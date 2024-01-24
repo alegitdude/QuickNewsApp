@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mfO1sN9egUZr7Vd7Dq/fb1aNtwSi3zLAXgWyUfUms3A=",
+  "Hash": "MHV0M/UKqWA76Yk9Det8XeAXd3xS9mCiKcp80vSrpvU=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Color_Logo_No_Icon-LGUi4kM1.png"
+    },
+    {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-CjnX1LTm.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-CjnX1LTm.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-CjnX1LTm.js"
     },
     {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-GPtVSxLq.css",

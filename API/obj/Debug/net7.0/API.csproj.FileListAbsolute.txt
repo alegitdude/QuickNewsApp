@@ -139,3 +139,5 @@ C:\Users\rickb\Desktop\QuickNewsApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Au
 C:\Users\rickb\Desktop\QuickNewsApp\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
 C:\Users\rickb\Desktop\QuickNewsApp\API\bin\Debug\net7.0\Azure.Security.KeyVault.Secrets.dll
 C:\Users\rickb\Desktop\QuickNewsApp\API\obj\Debug\net7.0\API.sourcelink.json
+C:\Users\rickb\Desktop\QuickNewsApp\API\bin\Debug\net7.0\NWebsec.AspNetCore.Core.dll
+C:\Users\rickb\Desktop\QuickNewsApp\API\bin\Debug\net7.0\NWebsec.AspNetCore.Middleware.dll

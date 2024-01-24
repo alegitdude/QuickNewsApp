@@ -22,7 +22,7 @@ namespace API.Extensions
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                 policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://quick-news.azurewebsites.net/");
+                 policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("/");
 
                 } );
             });
