@@ -33,7 +33,7 @@ const NavBar = (props: Props) => {
 
   return (
     <>
-      <nav className="overflow-hidden bg-background">
+      <nav className="flex-col items-center overflow-hidden bg-background">
         {user.username == "" && <Banner />}
         <Sidebar
           onBackdropClick={() => setMenuToggle(false)}
@@ -84,7 +84,7 @@ const NavBar = (props: Props) => {
             </button>
           )}
         </Sidebar>
-        <div className="flex items-center justify-between h-16 px-6 overflow-hidden ">
+        <div className="flex items-center justify-between h-16 px-6 overflow-hidden max-w-[1280px] m-auto ">
           <div className="flex justify-center basis-1/4">
             <Link to={"/general"}>
               <img src={`${Logo}`} className="hidden w-56 lg:block " />
@@ -128,11 +128,11 @@ const NavBar = (props: Props) => {
             )}
           </div>
         </div>
-        <div className={` border-t-2 border-b-2`}>
+        <div className={` border-t-2 border-b-2  `}>
           <div
             className={`${
               theUrl == "search" ? " lg:hidden" : "lg:flex"
-            } hidden px-4 justify-evenly `}
+            } hidden px-4 justify-evenly m-auto max-w-[1280px] `}
           >
             {quickLinks.map((link) => (
               <Link
@@ -150,7 +150,7 @@ const NavBar = (props: Props) => {
           </div>
         </div>
       </nav>
-      <div className="flex grow ">{outlet}</div>
+      <div className="flex grow max-w-[1280px] m-auto ">{outlet}</div>
     </>
   );
 };
