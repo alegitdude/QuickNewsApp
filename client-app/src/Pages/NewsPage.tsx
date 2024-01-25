@@ -3,17 +3,13 @@ import { api } from "../Api/agent";
 import { useEffect, useState } from "react";
 import { sortNews } from "../state/newsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import algoliasearch from "algoliasearch";
-import { Article } from "../models/article";
 import NewsLoader from "../assets/NewsLoader";
 import { RootState } from "../state/store";
 import { UserState } from "../models/user";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const { useArticleListQuery } = api;
-
-const client = algoliasearch("PG42VRDQ3Y", import.meta.env.VITE_ALGO_STRING);
-const index = client.initIndex("articles");
 
 const NewsPage = () => {
   const [pageLoading, setPageLoading] = useState<boolean>(false);
@@ -32,16 +28,6 @@ const NewsPage = () => {
     setPageLoading(true);
     if (isSuccess) {
       dispatch(sortNews(data));
-      const sortedData = reMapArticles(data);
-
-      index
-        .saveObjects(sortedData)
-        .then(() => {
-          return;
-        })
-        .catch(() => {
-          return;
-        });
     }
     setPageLoading(false);
     navigate("/general");
@@ -50,6 +36,7 @@ const NewsPage = () => {
   if (pageLoading || isLoading) {
     return (
       <div className="flex items-center justify-center grow">
+        <ToastContainer transition={Zoom} limit={2} />
         <NewsLoader />
       </div>
     );
@@ -65,27 +52,3 @@ const NewsPage = () => {
   );
 };
 export default NewsPage;
-
-function reMapArticles(someArray: Article[]) {
-  const newArray = someArray.map((anArticle: Article) => {
-    const newArticle = {
-      objectID: anArticle.uuid,
-      title: anArticle.title,
-      description: anArticle.description,
-      keywords: anArticle.keywords,
-      snippet: anArticle.snippet,
-      url: anArticle.url,
-      imageUrl: anArticle.imageUrl,
-      language: anArticle.language,
-      publishedAt: anArticle.publishedAt,
-      source: anArticle.source,
-      category1: anArticle.category1,
-      category2: anArticle.category2,
-      relevanceScore: anArticle.relevanceScore,
-      locale: anArticle.locale,
-      topStory: anArticle.topStory,
-    };
-    return newArticle;
-  });
-  return newArray;
-}

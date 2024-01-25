@@ -4,7 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { api } from "../Api/agent";
 import { useDispatch } from "react-redux";
 import { updateUser } from "../state/userSlice";
-import { errorAlert } from "../utils/Alerts";
+import { errorAlert, successAlert } from "../utils/Alerts";
 import { ToastContainer, Zoom } from "react-toastify";
 import DotLoader from "../assets/DotLoader";
 import Footer from "../Components/Footer";
@@ -36,6 +36,7 @@ function Login() {
       localStorage.setItem("jwt", data.token);
       dispatch(updateUser(data));
       navigate("/general");
+      successAlert("Successfully logged in!");
     }
     if (isError) {
       errorAlert("Credentials not found!");

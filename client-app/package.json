@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure/identity": "^4.0.1",
+    "@azure/keyvault-secrets": "^4.7.0",
     "@reduxjs/toolkit": "^2.0.1",
     "algoliasearch": "^4.22.1",
     "autoprefixer": "^10.4.16",

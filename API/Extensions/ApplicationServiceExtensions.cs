@@ -17,6 +17,7 @@ namespace API.Extensions
 
             services.AddDbContext<NewsDbContext>(opt =>
             {
+
                  opt.UseSqlServer(config.GetConnectionString("SqlDbPass"));
             } );
             services.AddCors(opt => {

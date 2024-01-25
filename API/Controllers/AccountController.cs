@@ -16,10 +16,13 @@ namespace API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly TokenService _tokenService;
-        public AccountController(UserManager<AppUser>userManager, TokenService tokenService)
+        private readonly IConfiguration _config;
+        public AccountController(UserManager<AppUser>userManager, TokenService tokenService, IConfiguration config)
         {
             _userManager = userManager;
             _tokenService = tokenService;
+            _config = config;
+
         }
 
         [AllowAnonymous]
@@ -75,8 +78,10 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
             var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
+            
 
-            return CreateUserObject(user);
+            return  CreateUserObject(user);
+           
         }
 
         [Authorize]
@@ -105,9 +110,21 @@ namespace API.Controllers
              return true;
         }
 
+          public class UserResponse
+    {
+       public UserResponse(UserDto user, string algoliaSearch)
+       {
+        User = user;
+        AlgoliaSearch = algoliaSearch;
+       }
+
+       public UserDto User {get; set;}
+       public string AlgoliaSearch {get; set;}
+    }
 
 
-        private UserDto CreateUserObject(AppUser user)
+
+        public UserDto CreateUserObject(AppUser user)
         {
             List<string> someSources = new List<string>();
             if(user.OmittedSources != null){

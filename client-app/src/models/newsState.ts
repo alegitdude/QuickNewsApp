@@ -8,4 +8,5 @@ export interface NewsState {
   entertainment: Article[];
   sports: Article[];
   page: number;
+  algoliaSearch: string;
 }

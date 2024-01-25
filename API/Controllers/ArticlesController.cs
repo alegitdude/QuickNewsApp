@@ -13,7 +13,7 @@ namespace API.Controllers
         
 
         [HttpGet("{sources}")] //api/articles/count
-        public async Task<ActionResult<List<DomainArticle>>> GetArticles(string sources, CancellationToken ct)
+        public async Task<ActionResult<Tuple<string, List<DomainArticle>>>> GetArticles(string sources, CancellationToken ct)
         {
             
             

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TzJkPD/zlPKQ4WqfvUBjyyCjIyH7Pfa1reNq/wDkiqw4lYADFiBHroBsjQYQkFoY4ZuN8yepvLEXdJLRLKyEow==",
+  "dgSpecHash": "ddja/4NuWoPIKQSqxwyr3w4IgfCNnO99oSkC1kJ823fVER4ZDaIluKOggT3Gk1s4wH0lKhzORPUXDLd0mDFqqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rickb\\.nuget\\packages\\algolia.search\\6.16.0\\algolia.search.6.16.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
@@ -79,6 +80,7 @@
     "C:\\Users\\rickb\\.nuget\\packages\\mongodb.libmongocrypt\\1.8.0\\mongodb.libmongocrypt.1.8.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\rickb\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\nwebsec.aspnetcore.core\\3.0.0\\nwebsec.aspnetcore.core.3.0.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\nwebsec.aspnetcore.middleware\\3.0.0\\nwebsec.aspnetcore.middleware.3.0.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

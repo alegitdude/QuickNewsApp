@@ -13,16 +13,26 @@ import {
   updateQuery,
   updateSearch,
 } from "../state/searchSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Reset from "../assets/Reset";
+import { RootState } from "../state/store";
+import { NewsState } from "../models/newsState";
+import DotLoader from "../assets/DotLoader";
 
 const SearchBar = () => {
-  const algoliaClient = algoliasearch(
-    "PG42VRDQ3Y",
-    import.meta.env.VITE_ALGO_STRING
-  );
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const news: NewsState = useSelector((store: RootState) => store.news);
+
+  useEffect(() => {
+    setIsLoading(true);
+    if (news.algoliaSearch) {
+      setIsLoading(false);
+    }
+  }, [news.algoliaSearch]);
+
+  const algoliaClient = algoliasearch("PG42VRDQ3Y", news.algoliaSearch);
 
   function AButton() {
     const theUrl = useLocation().pathname.substring(1);
@@ -52,14 +62,20 @@ const SearchBar = () => {
 
   return (
     <div className="flex justify-center">
-      <InstantSearch searchClient={algoliaClient} indexName="articles">
-        <Configure hitsPerPage={500} page={1} />
-        <div className="flex ">
-          <CustomSearchBox />
-
-          <AButton />
+      {isLoading ? (
+        <div className="flex justify-center w-72">
+          <DotLoader />
         </div>
-      </InstantSearch>
+      ) : (
+        <InstantSearch searchClient={algoliaClient} indexName="articles">
+          <Configure hitsPerPage={500} page={1} />
+          <div className="flex ">
+            <CustomSearchBox />
+
+            <AButton />
+          </div>
+        </InstantSearch>
+      )}
     </div>
   );
 };

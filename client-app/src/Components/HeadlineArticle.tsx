@@ -10,8 +10,8 @@ const HeadlineArticle = (props: Props) => {
   const { title, url, imageUrl, source } = article;
 
   let adjustedTitle: string = title;
-  if (title.length > 100) {
-    adjustedTitle = title.substring(0, 100) + "...";
+  if (title.length > 80) {
+    adjustedTitle = title.substring(0, 80) + "...";
   }
 
   return (

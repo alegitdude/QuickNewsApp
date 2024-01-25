@@ -10,6 +10,7 @@ const initialState: NewsState = {
   entertainment: [],
   sports: [],
   page: 1,
+  algoliaSearch: "",
 };
 
 const newsSlice = createSlice({
@@ -20,7 +21,8 @@ const newsSlice = createSlice({
       state.page = action.payload;
     },
     sortNews(state, action) {
-      const payloadList: Article[] = action.payload;
+      state.algoliaSearch = action.payload.item1;
+      const payloadList: Article[] = action.payload.item2;
 
       const generalList: Article[] = [],
         politicsList: Article[] = [],

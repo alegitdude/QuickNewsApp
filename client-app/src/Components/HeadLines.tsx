@@ -7,6 +7,7 @@ import { RootState } from "../state/store";
 import { NewsState } from "../models/newsState";
 
 import SingleArticle from "./SingleArticle";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const HeadLines = () => {
   const [fetchedNews, setFetchedNews] = useState<Article[]>();
@@ -41,6 +42,7 @@ const HeadLines = () => {
   if (fetchedNews) {
     return (
       <div className="flex flex-col items-center m-4">
+        <ToastContainer transition={Zoom} limit={2} />
         <div>
           <h1 className="mb-4 text-3xl">Breaking</h1>
         </div>
