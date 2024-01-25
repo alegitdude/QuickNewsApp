@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using API.Services;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -22,7 +24,8 @@ namespace API.Extensions
             })
             .AddEntityFrameworkStores<NewsDbContext>();
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+            var token = config.GetConnectionString("TokenKey");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetConnectionString("TokenKey")));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt => {
                 opt.TokenValidationParameters = new TokenValidationParameters

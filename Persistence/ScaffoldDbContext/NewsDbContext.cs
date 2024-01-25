@@ -13,30 +13,22 @@ namespace Persistence.ScaffoldDbContext;
 
 public partial class NewsDbContext : IdentityDbContext<AppUser>
 {
-    public NewsDbContext(DbContextOptions<NewsDbContext> options)
+    private readonly IConfiguration _config;
+    public NewsDbContext(DbContextOptions<NewsDbContext> options, IConfiguration config)
         : base(options)
     {
+        _config = config;
     }
    
    
 
     public virtual DbSet<Article> Articles { get; set; }
-    SecretClientOptions options = new SecretClientOptions()
-{
-    Retry =
-        {
-            Delay= TimeSpan.FromSeconds(2),
-            MaxDelay = TimeSpan.FromSeconds(16),
-            MaxRetries = 3,
-            
-         }
-};
      
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer(_config.GetConnectionString("SqlDbPass"));
             
-            optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SqlString"));
         }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

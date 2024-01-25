@@ -17,12 +17,12 @@ namespace API.Extensions
 
             services.AddDbContext<NewsDbContext>(opt =>
             {
-                 opt.UseSqlServer(config.GetConnectionString("DefaultConnection"));
+                 opt.UseSqlServer(config.GetConnectionString("SqlDbPass"));
             } );
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                 policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("/");
+                 policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://quick-news.azurewebsites.net/");
 
                 } );
             });
