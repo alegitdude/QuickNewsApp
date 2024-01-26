@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UTYAxc96CQyj4txQbJAz8LqPpYx7rPGkR5ErgmVa660=",
+  "Hash": "tdH+IMmV3di7adZ/9RpJ2ra7pMxP9x6NLHBg3m8ZPr0=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -226,6 +226,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-VwsXgZaM.css"
     },
     {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-w_jeEtpm.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-w_jeEtpm.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-w_jeEtpm.js"
+    },
+    {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-WXdyA16c.js",
       "SourceId": "API",
       "SourceType": "Discovered",
@@ -243,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\index-WXdyA16c.js"
+    },
+    {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-ZL9uARgo.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-ZL9uARgo.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-ZL9uARgo.js"
     },
     {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\Neuton Regular-zjEwYgeu.ttf",

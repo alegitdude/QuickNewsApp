@@ -146,7 +146,7 @@ function Signup() {
                 {...register("password", {
                   required: "Please provide a password",
                   minLength: {
-                    value: 46,
+                    value: 6,
                     message: "Password must be at least 6 characters",
                   },
                   maxLength: {

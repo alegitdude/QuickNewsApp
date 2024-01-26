@@ -76,24 +76,28 @@ namespace Application.Articles
               
                 domainArticles.Add(newArticle);
                }
-               var adminKey = _config.GetConnectionString("AlgoliaAdmin");
-               if(adminKey != null)
+               string adminKey = "";
+               try
                {
-                 ISearchClient client = new SearchClient("PG42VRDQ3Y", adminKey.ToString());
-               SearchIndex index =  client.InitIndex("articles");
-               var algoliaArticles = Convert(domainArticles);
-               await index.SaveObjectsAsync(algoliaArticles);
-
-               }else 
-               {
-                Console.WriteLine(adminKey);
+                adminKey = _config.GetConnectionString("AlgoliaAdmin").ToString();
+                if(adminKey != "")
+                {
+                    ISearchClient client = new SearchClient("PG42VRDQ3Y", adminKey);
+                    SearchIndex index =  client.InitIndex("articles");
+                    var algoliaArticles = Convert(domainArticles);
+                    await index.SaveObjectsAsync(algoliaArticles);
+                }
+                
                }
-                var searchKey = _config.GetConnectionString("AlgoliaAdmin");
+               catch (System.Exception)
+               {
+                
+                throw;
+               }
+             
+               var searchKey = _config.GetConnectionString("AlgoliaSearch");
                Tuple<string, List<DomainArticle>> newTuple = new Tuple<string, List<DomainArticle>>(searchKey, domainArticles);
-              
-
                
-
                return newTuple;
             }
         }

@@ -1,16 +1,14 @@
 function DownArrow(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      viewBox="0 0 1024 1024"
       fill="currentColor"
-      viewBox="0 0 16 16"
       height="1.2em"
       width="1.2em"
+      className="rounded-3xl"
       {...props}
     >
-      <path
-        className=""
-        d="M2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L7.5 10.293V4.5a.5.5 0 011 0z"
-      />
+      <path d="M862 465.3h-81c-4.6 0-9 2-12.1 5.5L550 723.1V160c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v563.1L255.1 470.8c-3-3.5-7.4-5.5-12.1-5.5h-81c-6.8 0-10.5 8.1-6 13.2L487.9 861a31.96 31.96 0 0048.3 0L868 478.5c4.5-5.2.8-13.2-6-13.2z" />
     </svg>
   );
 }

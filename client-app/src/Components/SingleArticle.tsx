@@ -49,9 +49,17 @@ const SingleArticle = (props: Props) => {
           <div className="absolute right-2 bottom-px">
             <button
               onClick={() => setExpanded((pastState) => !pastState)}
-              className="transition-all duration-200 stroke-1 stroke-white sm:text-xl hover:bg-accent hover:stroke-black hover:text-white"
+              className="p-[1px] text-white transition-all duration-200 bg-black rounded-xl sm:text-xl hover:bg-white hover:text-black"
             >
-              <DownArrow />
+              <div className="flex gap-0 rounded-3xl">
+                <div
+                  className={`transition-all ease-in-out duration-500 ${
+                    expanded ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <DownArrow />
+                </div>
+              </div>
             </button>
           </div>
         </div>
