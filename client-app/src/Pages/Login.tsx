@@ -103,10 +103,13 @@ function Login() {
               <input
                 {...register("password", {
                   required: "Password is required",
-                  maxLength: 18,
                   minLength: {
+                    value: 6,
+                    message: "Passwords have at least 6 characters",
+                  },
+                  maxLength: {
                     value: 8,
-                    message: "Password must have 8 characters",
+                    message: "Passwords have no more than 8 characters",
                   },
                 })}
                 type="password"
