@@ -2,14 +2,14 @@ import { toast } from "react-toastify";
 
 export const successAlert = (message: string) => {
   toast.success(message, {
-    position: "top-right",
+    position: "top-center",
     autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: "colored",
+    theme: "dark",
   });
 };
 

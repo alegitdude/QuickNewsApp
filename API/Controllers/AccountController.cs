@@ -88,14 +88,15 @@ namespace API.Controllers
         [HttpPut("{aSource}")]
         public async Task<ActionResult<bool>> EditOmittedSources(string aSource)
         {
-            Console.WriteLine(aSource);
             var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
 
-            Console.WriteLine(user.OmittedSources);
+            if(user.OmittedSources == null)
+            {
+                user.OmittedSources = "";
+            }
 
             int theIndex = user.OmittedSources.IndexOf(aSource);
 
-            Console.WriteLine(theIndex );
             string updatedSources = "";
             if(theIndex == -1 || theIndex == 0)
             {

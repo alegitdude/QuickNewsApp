@@ -32,7 +32,7 @@ const Account = () => {
   }, [data]);
 
   return (
-    <div className="h-screen">
+    <div className="flex flex-col min-h-screen">
       <ToastContainer transition={Zoom} limit={2} />
       <nav className="flex justify-center bg-background">
         <Link to={"/general"}>
@@ -40,7 +40,7 @@ const Account = () => {
         </Link>
       </nav>
       <div className="border-t-2 border-b-2"></div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center grow">
         <h1 className="my-8 text-3xl">Account</h1>
         <div className="flex flex-col w-5/6 max-w-3xl gap-4 overflow-hidden sm:w-5/6">
           <h1 className="flex px-3 my-4 text-2xl underline ">Source Curator</h1>

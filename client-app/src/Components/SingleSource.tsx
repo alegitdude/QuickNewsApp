@@ -5,6 +5,7 @@ import { RootState } from "../state/store";
 import { UserState } from "../models/user";
 import { addSource, removeSource } from "../state/userSlice";
 import { useEffect } from "react";
+import { errorAlert, successAlert } from "../utils/Alerts";
 
 type Props = {
   source: string;
@@ -22,8 +23,10 @@ const SingleSource = (props: Props) => {
     if (isSuccess) {
       if (user.omittedSources.includes(source)) {
         dispatch(removeSource(source));
+        successAlert(`${source} unblocked!`);
       } else {
         dispatch(addSource(source));
+        errorAlert(`${source} blocked!`);
       }
     }
   }, [isSuccess, source, dispatch]);
@@ -51,7 +54,6 @@ const SingleSource = (props: Props) => {
               <button
                 onClick={() => {
                   editUserSources(source);
-                  //   setTempList(tempList.filter((aSource) => aSource != source));
                 }}
                 className="hover:after:transition-all shadow-2xl after:transition-all after:duration-500 hover:after:duration-500 hover:after:ease-in-out hover:after:-translate-y-10 relative mt-1 rounded-md  px-3.5 py-2  text-sm font-semibold text-white  bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent after:block after:bg-red-600 after:content-['Blocked'] after:z-100 after:absolute after:top-0 after:w-full after:-translate-x-3.5 after:py-2 after:rounded-md "
               >

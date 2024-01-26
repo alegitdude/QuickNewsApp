@@ -25,7 +25,6 @@ function Error() {
               </h4>
             </Link>
             <span className="absolute mt-6 text-5xl right-10 top-[-50%]">
-              {" "}
               &#8592;
             </span>
           </div>
