@@ -91,9 +91,13 @@ namespace API.Controllers
             Console.WriteLine(aSource);
             var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
 
+            Console.WriteLine(user.OmittedSources);
+
             int theIndex = user.OmittedSources.IndexOf(aSource);
+
+            Console.WriteLine(theIndex );
             string updatedSources = "";
-            if(theIndex == -1)
+            if(theIndex == -1 || theIndex == 0)
             {
                 updatedSources = user.OmittedSources + aSource + ",";
 
