@@ -25,18 +25,29 @@ const SingleArticle = (props: Props) => {
   return (
     <div
       onMouseLeave={() => setExpanded(false)}
-      className={`transition-all duration-200 overflow-hidden  ${
+      className={`transition-all duration-200 overflow-hidden shadow-sm ${
         expanded ? "h-fit sm:h-fit" : "h-28 sm:h-32"
       } `}
     >
       <div className="flex w-auto transition-all duration-200 border-2 border-solid rounded-lg h-28 sm:h-32">
         <div className="flex h-full rounded-lg ">
-          <img src={`${imageUrl}`} className="w-64 sm:w-72 " />
+          <Link className="" target="_blank" to={`${url}`}>
+            <img
+              src={`${imageUrl}`}
+              className="w-64 h-full rounded-l-lg sm:w-72"
+            />
+          </Link>
         </div>
         <div className="relative flex flex-col justify-center w-full p-2">
-          <h3 className="text-sm font-bold underline sm:text-base decoration-1 ">
-            {adjustedTitle}
-          </h3>
+          <Link
+            className="text-center transition-all duration-200 hover:text-blue-700"
+            target="_blank"
+            to={`${url}`}
+          >
+            <h3 className="flex justify-center text-sm font-bold underline sm:text-base decoration-1 ">
+              {adjustedTitle}
+            </h3>
+          </Link>
           <div className="inline">
             <Link
               className="transition-all duration-200 hover:text-blue-700"

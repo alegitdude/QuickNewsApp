@@ -46,7 +46,7 @@ const HeadLines = () => {
         <div>
           <h1 className="mb-4 text-3xl">Breaking</h1>
         </div>
-        <div className="relative grid gap-0 sm:gap-4 grid-col-1 sm:grid-cols-2 md:grid-cols-3 w-7/8 h">
+        <div className="relative grid gap-0 mb-4 sm:gap-4 grid-col-1 sm:grid-cols-2 md:grid-cols-3 w-7/8 h">
           {slicedNews?.map((oneArticle) => {
             return (
               <HeadlineArticle article={oneArticle} key={oneArticle.uuid} />

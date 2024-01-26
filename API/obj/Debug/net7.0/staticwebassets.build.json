@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B2m5TmrM9fdy53SrUlrw8nx7HoYK0ugBeo/tAWcvEyc=",
+  "Hash": "LPVz8PrIMqpbMBolXJELyPjJtTymIxE7hnE4soVifeg=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -74,6 +74,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-0FmF4RDx.js"
     },
     {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-39PYgRv0.css",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-39PYgRv0.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-39PYgRv0.css"
+    },
+    {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-47vvn1YM.js",
       "SourceId": "API",
       "SourceType": "Discovered",
@@ -110,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\index-7c1mmEog.js"
+    },
+    {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-a5QkfQO9.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-a5QkfQO9.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-a5QkfQO9.js"
     },
     {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-ABJM9-pG.js",
@@ -262,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\index-o0Rha6P1.js"
+    },
+    {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-oKVU6hXg.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-oKVU6hXg.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-oKVU6hXg.js"
     },
     {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-p6nbma28.js",
