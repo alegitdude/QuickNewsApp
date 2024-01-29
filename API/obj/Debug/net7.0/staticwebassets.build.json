@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LPVz8PrIMqpbMBolXJELyPjJtTymIxE7hnE4soVifeg=",
+  "Hash": "stfCb8NqYrJLhR4pfy0Xqx82wIVF9VOs0ui7weP5SAI=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -359,6 +359,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-R7E1qyML.js"
     },
     {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-SPJ8WUQt.js",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-SPJ8WUQt.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-SPJ8WUQt.js"
+    },
+    {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-ui3Qkelx.js",
       "SourceId": "API",
       "SourceType": "Discovered",
@@ -452,6 +471,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\index-XdbEGdy6.css"
+    },
+    {
+      "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-XsRUky6X.css",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "assets/index-XsRUky6X.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\index-XsRUky6X.css"
     },
     {
       "Identity": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\wwwroot\\assets\\index-yD_RnZQV.js",
