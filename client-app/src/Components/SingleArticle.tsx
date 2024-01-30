@@ -29,16 +29,20 @@ const SingleArticle = (props: Props) => {
         expanded ? "h-fit sm:h-fit" : "h-28 sm:h-32"
       } `}
     >
-      <div className="flex w-auto transition-all duration-200 border-2 border-solid rounded-lg h-28 sm:h-32">
-        <div className="flex h-full rounded-lg ">
-          <Link className="" target="_blank" to={`${url}`}>
+      <div className="flex transition-all duration-200 border-2 border-solid rounded-lg h-28 sm:h-32">
+        <div className="flex justify-center h-full rounded-l-lg overflow-hidden basis-4/12 bg-black min-w-[160px]">
+          <Link
+            className="flex justify-center overflow-hidden bg-black rounded-l-lg "
+            target="_blank"
+            to={`${url}`}
+          >
             <img
               src={`${imageUrl}`}
-              className="w-64 h-full rounded-l-lg sm:w-72"
+              className="h-full  min-w-[180px] rounded-l-lg"
             />
           </Link>
         </div>
-        <div className="relative flex flex-col justify-center w-full p-2">
+        <div className="relative flex flex-col justify-center min-w-[162px] p-2 basis-8/12">
           <Link
             className="text-center transition-all duration-200 hover:text-blue-700"
             target="_blank"

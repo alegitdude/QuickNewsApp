@@ -45,10 +45,6 @@ const NewsPage = () => {
     console.log(error);
     return <div>Problem fetching the News</div>;
   }
-  return (
-    <div>
-      <HeadLines />
-    </div>
-  );
+  return <HeadLines />;
 };
 export default NewsPage;

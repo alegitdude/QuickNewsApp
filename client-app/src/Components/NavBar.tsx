@@ -3,7 +3,7 @@ import Logo from "../../public/Color_Logo_Edit.png";
 import LogoNoIcon from "../../public/Color_Logo_No_Icon.png";
 import IconHamburgerMenu from "../assets/IconHamburgerMenu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { UserState } from "../models/user";
 import { RootState } from "../state/store";
@@ -31,59 +31,73 @@ const NavBar = (props: Props) => {
   const navigate = useNavigate();
   const theUrl = useLocation().pathname.substring(1);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.outerWidth > 1024) {
+        setMenuToggle(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <nav className="flex-col items-center overflow-hidden bg-background">
         {user.username == "" && <Banner />}
-        <Sidebar
-          onBackdropClick={() => setMenuToggle(false)}
-          toggled={menuToggle}
-          backgroundColor="#FEFBF6"
-          breakPoint="all"
-        >
-          <Menu>
-            <div className="flex justify-center m-1 ">
-              <SearchBar />
-            </div>
-            <div className="mt-4">
-              {quickLinks.map((link) => (
-                <li
-                  key={link}
-                  className={
-                    link == theUrl
-                      ? "font-bold underline py-2 mt-1  decoration-solid underline-offset-2 px-4  hover:bg-accent"
-                      : "font-bold py-2 mt-1 hover:underline hover: decoration-solid hover:underline-offset-2 px-4  hover:bg-accent"
-                  }
-                >
-                  <Link
-                    to={`/${link}`}
-                    onClick={() => setMenuToggle(false)}
-                    className="font-bold"
+        <div className="">
+          <Sidebar
+            onBackdropClick={() => setMenuToggle(false)}
+            toggled={menuToggle}
+            backgroundColor="#FEFBF6"
+            breakPoint="all"
+          >
+            <Menu>
+              <div className="flex justify-center m-1 ">
+                <SearchBar />
+              </div>
+              <div className="mt-4">
+                {quickLinks.map((link) => (
+                  <li
+                    key={link}
+                    className={
+                      link == theUrl
+                        ? "font-bold underline py-2 mt-1  decoration-solid underline-offset-2 px-4  hover:bg-accent"
+                        : "font-bold py-2 mt-1 hover:underline hover: decoration-solid hover:underline-offset-2 px-4  hover:bg-accent"
+                    }
                   >
-                    {link[0].toUpperCase() + link.slice(1)}
-                  </Link>
-                </li>
-              ))}
-            </div>
-          </Menu>
-          {user.username == "" ? (
-            <Link to={"/login"}>
+                    <Link
+                      to={`/${link}`}
+                      onClick={() => setMenuToggle(false)}
+                      className="font-bold"
+                    >
+                      {link[0].toUpperCase() + link.slice(1)}
+                    </Link>
+                  </li>
+                ))}
+              </div>
+            </Menu>
+            {user.username == "" ? (
+              <Link to={"/login"}>
+                <button
+                  onClick={() => navigate("/login")}
+                  className="  flex-none rounded-md bg-primary mt-5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  Sign In
+                </button>
+              </Link>
+            ) : (
               <button
-                onClick={() => navigate("/login")}
-                className="  flex-none rounded-md bg-primary mt-5 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                onClick={() => navigate("/account")}
+                className="h-10 my-4  px-3.5 py-2 text-white bg-primary rounded-md hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                Sign In
+                <IconUser />
               </button>
-            </Link>
-          ) : (
-            <button
-              onClick={() => navigate("/account")}
-              className="h-10 my-4  px-3.5 py-2 text-white bg-primary rounded-md hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              <IconUser />
-            </button>
-          )}
-        </Sidebar>
+            )}
+          </Sidebar>
+        </div>
         <div className="flex items-center justify-between h-16 px-6 overflow-hidden max-w-[1280px] m-auto ">
           <div className="flex justify-center basis-1/4">
             <Link to={"/general"}>
@@ -150,7 +164,9 @@ const NavBar = (props: Props) => {
           </div>
         </div>
       </nav>
-      <div className="flex grow max-w-[1280px] m-auto ">{outlet}</div>
+      <div className="flex grow max-w-[1280px] justify-center m-auto ">
+        {outlet}
+      </div>
     </>
   );
 };

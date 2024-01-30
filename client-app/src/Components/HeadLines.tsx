@@ -16,6 +16,7 @@ import {
   SportsIcon,
   TechIcon,
 } from "../assets/Index";
+import DownArrow from "../assets/DownArrow";
 
 const HeadLines = () => {
   const [fetchedNews, setFetchedNews] = useState<Article[]>();
@@ -23,8 +24,27 @@ const HeadLines = () => {
   const [iconVariable, setIconVariable] = useState<JSX.Element>(
     <GeneralIcon />
   );
+  const [showButton, setShowButton] = useState(false);
+
   const theUrl = useLocation().pathname;
   const news: NewsState = useSelector((store: RootState) => store.news);
+
+  function scrollFunc(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > 300) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
 
   useEffect(() => {
     setImageNumber(60);
@@ -54,19 +74,22 @@ const HeadLines = () => {
         setIconVariable(<EntertainmentIcon />);
         break;
     }
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [theUrl, news]);
 
   const slicedNews = fetchedNews?.slice(0, 9);
 
   if (fetchedNews) {
     return (
-      <div className="flex flex-col items-center m-4">
+      <div className="relative flex flex-col items-center w-fit min-w-[300px] m-4 ">
         <ToastContainer transition={Zoom} limit={2} />
         <div className="flex">
           <h1 className="mb-4 text-3xl">Breaking - </h1>
-          <div className="ml-2 text-4xl"> {iconVariable}</div>
+          <div className="ml-2 text-4xl mt-[1px]"> {iconVariable}</div>
         </div>
-        <div className="relative grid gap-0 mb-4 sm:gap-4 grid-col-1 sm:grid-cols-2 md:grid-cols-3 w-7/8 h">
+        <div className="relative grid gap-0 mb-4 sm:gap-x-6 sm:gap-y-4 md:gap-y-0 md:gap-x-4 lg:gap-x-8 lg:gap-y-4 grid-col-1 sm:grid-cols-2 md:grid-cols-3">
           {slicedNews?.map((oneArticle) => {
             return (
               <HeadlineArticle article={oneArticle} key={oneArticle.uuid} />
@@ -76,11 +99,7 @@ const HeadLines = () => {
 
         <div className="flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-4 ">
           {fetchedNews.slice(10, imageNumber).map((article) => {
-            return (
-              <div className="h-fit" key={article.uuid}>
-                <SingleArticle article={article} />
-              </div>
-            );
+            return <SingleArticle article={article} key={article.uuid} />;
           })}
         </div>
         <button
@@ -96,6 +115,14 @@ const HeadLines = () => {
           }}
         >
           Load more
+        </button>
+        <button
+          onClick={() => scrollFunc()}
+          className={`${
+            showButton ? "fixed" : "hidden"
+          } p-4 m-auto text-white transition-all rotate-180 rounded-2xl bg-slate-700 hover:bg-slate-400 bottom-4`}
+        >
+          <DownArrow />
         </button>
       </div>
     );

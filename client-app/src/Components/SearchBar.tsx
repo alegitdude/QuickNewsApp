@@ -97,61 +97,59 @@ function CustomSearchBox(props: UseSearchBoxProps) {
   }
 
   return (
-    <div>
-      <form
-        action=""
-        className="relative"
-        role="search"
-        noValidate
-        onSubmit={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          if (inputRef.current?.value != "") {
-            dispatch(updateSearch(results.hits));
-            dispatch(updatePossiblePages(results.nbPages));
-            dispatch(updateQuery(results.query));
-            if (theUrl != "search") {
-              navigate("/search");
-            }
+    <form
+      action=""
+      className="relative"
+      role="search"
+      noValidate
+      onSubmit={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (inputRef.current?.value != "") {
+          dispatch(updateSearch(results.hits));
+          dispatch(updatePossiblePages(results.nbPages));
+          dispatch(updateQuery(results.query));
+          if (theUrl != "search") {
+            navigate("/search");
           }
+        }
 
-          if (inputRef.current) {
-            inputRef.current.blur();
-          }
+        if (inputRef.current) {
+          inputRef.current.blur();
+        }
+      }}
+      onReset={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        setQuery("");
+
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }}
+    >
+      <input
+        className={`py-1 pl-4 lg:pr-8 border-2 rounded-md border-accent`}
+        ref={inputRef}
+        placeholder={"Search"}
+        spellCheck={false}
+        maxLength={200}
+        type="search"
+        value={inputValue}
+        onChange={(event) => {
+          setQuery(event.currentTarget.value);
         }}
-        onReset={(event) => {
-          event.preventDefault();
-          event.stopPropagation();
+        autoFocus
+      />
 
-          setQuery("");
-
-          if (inputRef.current) {
-            inputRef.current.focus();
-          }
-        }}
+      <button
+        type="reset"
+        hidden={inputValue.length === 0}
+        className="absolute right-[4%] top-[25%]"
       >
-        <input
-          className="py-1 pl-4 pr-8 border-2 rounded-md border-accent"
-          ref={inputRef}
-          placeholder={"Search"}
-          spellCheck={false}
-          maxLength={200}
-          type="search"
-          value={inputValue}
-          onChange={(event) => {
-            setQuery(event.currentTarget.value);
-          }}
-          autoFocus
-        />
-
-        <button
-          type="reset"
-          hidden={inputValue.length === 0}
-          className="absolute right-[4%] top-[25%]"
-        >
-          {<Reset />}
-        </button>
-      </form>
-    </div>
+        {<Reset />}
+      </button>
+    </form>
   );
 }
