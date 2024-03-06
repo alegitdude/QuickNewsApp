@@ -7727,11 +7727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
+      "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\rickb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\obj\\",
+      "outputPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rickb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7748,11 +7748,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj"
+            "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Persistence\\Persistence.csproj": {
-              "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Persistence\\Persistence.csproj"
+            "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Persistence\\Persistence.csproj": {
+              "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Persistence\\Persistence.csproj"
             }
           }
         }

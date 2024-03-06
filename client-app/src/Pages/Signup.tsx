@@ -57,7 +57,7 @@ function Signup() {
   }, [isSuccess, data, isError, error, dispatch, navigate]);
 
   return (
-    <div className="h-screen">
+    <div className="flex flex-col min-h-screen">
       <ToastContainer transition={Zoom} limit={2} />
       <nav className="flex justify-center bg-background">
         <Link to={"/general"}>
@@ -65,7 +65,7 @@ function Signup() {
         </Link>
       </nav>
       <div className="border-t-2 border-b-2"></div>
-      <div className="max-w-sm mx-auto mt-10 ">
+      <div className="max-w-sm mx-auto mt-10 grow w-96 ">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="space-y-6 border-2 rounded-md bg-background"

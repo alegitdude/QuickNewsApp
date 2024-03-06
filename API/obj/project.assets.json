@@ -9236,11 +9236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\rickb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rickb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9257,8 +9257,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\Application.csproj"
+            "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\Application.csproj"
             }
           }
         }

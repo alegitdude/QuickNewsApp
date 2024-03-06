@@ -773,11 +773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\rickb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rickb\\AppData\\Roaming\\NuGet\\NuGet.Config",

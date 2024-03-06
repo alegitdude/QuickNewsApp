@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m07NoCxqMYR/ewkSpfQEYX3TNtc+RCu2bS78ygi3kZWWkTu/COh5SpDWok+xiKOSud5ZfT1BMlwFURN3vsv7/w==",
+  "dgSpecHash": "IYYplsQssoolFR5ADtSl2JiqhBTWlzVhwtj+uNQScB6cr3Xyz2CvmZxyhgrxGOJH0oc4bQYHOIxLQkK6Pw0n4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rickb\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\rickb\\Desktop\\Desktop\\QuickNewsApp\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rickb\\.nuget\\packages\\algolia.search\\6.16.0\\algolia.search.6.16.0.nupkg.sha512",
     "C:\\Users\\rickb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
